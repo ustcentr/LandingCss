@@ -6,7 +6,7 @@
 	color: #666
 
 ::selection
-	background-color: $accent
+	background-color: $blue
 	color: #fff
 
 body
@@ -38,6 +38,457 @@ body
 b, strong
 	font-weight: bold
 
+ul, li
+	list-style-type: none
+	margin: 0
+	padding: 0
 
+
+.menu-container
+	max-width: 950px
+	padding: 0 18px 0 0
+	margin: auto
+
+header
+	.top-menu
+		background-color: #2f358a
+		.menu-row
+			height: 44px
+			display: flex
+			flex-direction: row
+			justify-content: flex-end
+			align-items: center
+			.main-menu
+				//line-height: 44px
+				ul
+					display: flex
+					flex-direction: row
+					justify-content: space-between
+					li
+						display: inline-block
+						margin: auto
+						margin-left: 22px
+						&:first-child
+							margin-left: 0
+						a
+							color: #ffffff
+							font-family: "Segoe UI"
+							font-size: 14px
+							font-weight: 400
+							line-height: 24px
+							text-transform: uppercase
+							text-decoration: none
+							transition: all .25s ease
+							&:hover
+								color: darken(#fff, 20%)
+								text-decoration: underline
+						&:last-child
+							margin-left: 20px
+						&:nth-last-child(2) a, &:last-child a
+							font-size: 12px
+
+			.language-switcher
+				position: relative
+				margin-left: 48px
+				ul
+					display: none
+					position: absolute
+					li
+						padding-top: 2px
+						&:first-of-type
+							padding-top: 5px
+			.mobile-menu
+				display: none
+				position: relative
+				z-index: 1
+				ul
+					display: none
+					position: absolute
+					width: 150px
+					top: 38px
+					box-shadow: 0 1px 3px rgba(47,53,138,.6)
+					background-color: #fff
+					li
+						display: block
+						width: 100%
+						border-bottom: 1px solid $blue
+						&:last-of-type
+							border-bottom: none
+						a
+							display: block
+							width: 100%
+							padding: 5px 15px
+							transition: all .25s ease
+							&:hover
+								background-color: darken(#fff, 10%)
+								text-decoration: none
+				.fa
+					font-size: 30px
+					color: #ffffff
+					cursor: pointer
+
+.middle-menu
+	padding-top: 4px
+	padding-bottom: 7px
+	border-bottom: 1px solid $yellow
+	.middle-menu-row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.logo
+			margin-right: 12px
+			margin-left: -3px
+		.first-level
+			//padding: 0 15px
+			margin-top: 8px
+			padding: 0 5px
+			width: 560px
+			display: flex
+			justify-content: space-between
+			> li
+				display: inline-block
+				position: relative
+				padding-right: 20px
+				> a
+					text-transform: uppercase
+				&::before
+					content: ''
+					position: absolute
+					background-image: url("../img/angle.png")
+					width: 12px
+					height: 7px
+					cursor: pointer
+					top: 10px
+					right: 2px
+					transition: all .25s ease
+				&.open::before
+					transform: rotate(180deg)
+				a
+					display: block
+					color: $blue
+					font-family: "Segoe UI"
+					font-size: 24px
+					font-weight: 300
+					line-height: 1
+					text-decoration: none
+			.dropdown-menu
+				display: none
+				position: absolute
+				width: 242px
+				top: 42px
+				left: -2px
+				z-index: 1
+				background-color: #ffffff
+				li
+					width: 100%
+					&:first-child a
+						padding: 35px 0 25px 13px
+					a
+						padding: 17px 0 23px 13px
+					&:nth-child(2n)
+						background-color: #f2f2f2
+		.donate-btn
+			width: 150px
+			height: 54px
+			border-radius: 4px
+			background-color: #00923f
+			color: #ffffff
+			font-family: "Segoe UI"
+			font-size: 22px
+			font-weight: 400
+			line-height: 52px
+			border: none
+			box-shadow: none
+			cursor: pointer
+			padding-left: 8px
+
+.bottom-header
+	&-container
+        position: relative
+        margin: auto
+        max-width: 1473px
+        padding-left: 30px
+        padding-right: 30px
+        .social-list
+            top: 7px
+            right: 12px
+            position: absolute
+            display: flex
+            flex-direction: column
+            a
+              margin-bottom: 3px
+              width: 22px
+              height: 22px
+
+	&-row
+		display: flex
+		flex-direction: row
+		.left
+			background-color: $blue
+			width: 51.5%
+			padding: 18px 33px 19px 30px
+			position: relative
+			h1
+				color: #ffffff
+				font-family: "Segoe UI"
+				font-size: 66px
+				font-weight: 400
+				line-height: 1.2
+				margin-bottom: 42px
+			.description
+				color: #ffffff
+				font-family: "Segoe UI"
+				font-size: 18px
+				font-weight: 400
+				line-height: 1.17
+				margin-bottom: 67px
+				padding-left: 5px
+				letter-spacing: 0
+				word-spacing: -1.4px
+		.right
+			width: 49.5%
+
+.button_wrapper
+	margin-left: 5px
+	.learn-more
+		position: relative
+		color: #ffffff
+		font-family: "Segoe UI"
+		font-size: 24px
+		font-weight: 300
+		padding: 7px 168px 10px 15px
+		text-decoration: none
+		transition: background-color .25s ease
+		&::before
+			position: absolute
+			content: "\f107"
+			font: normal normal normal 19px/1 FontAwesome
+			color: #fff
+			right: 15px
+			top: 15px
+		&.yellow-btn
+			background-color: $yellow
+			&:hover
+				background-color: darken($yellow, 10%)
+		&.green-btn
+			background-color: $green
+			&:hover
+				background-color: darken($green, 10%)
+
+.container
+    position: relative
+    margin: auto
+    max-width: 1473px
+    padding-left: 30px
+    padding-right: 30px
+
+.motivating-quote .container
+	min-height: 394px
+	display: flex
+	justify-content: center
+	align-items: center
+	p
+		color: $blue
+		font-family: "Segoe UI Light"
+		font-size: 48px
+		font-weight: 400
+		max-width: 838px
+		line-height: 1.2
+		margin-top: 17px
+		margin-left: -11px
+
+.motivating-quote.second-type
+	.container
+		min-height: 469px
+		p
+			max-width: 1000px
+			margin-top: 25px
+			margin-left: -6px
+
+.about-us
+	.top, .bottom
+		background-color: $green
+		margin-right: 15px
+		.title
+			text-transform: uppercase
+			color: #ffffff
+			font-family: "Segoe UI"
+			font-size: 14px
+			font-weight: 400
+			line-height: 1
+		.description
+			color: #ffffff
+			font-family: "Segoe UI"
+			font-size: 16px
+			font-weight: 400
+			text-indent: 36px
+			line-height: 1.2
+			margin-bottom: 24px
+		.wrap-btn
+			text-align: end
+			.read-more
+				color: #ffffff
+				font-family: "Segoe UI"
+				font-size: 14px
+				font-weight: 400
+				text-decoration: underline
+	.top
+		padding: 38px 41px 22px 28px
+		.title
+			margin-bottom: 17px
+
+
+	.white-line
+		width: 100%
+		height: 1px
+		background-color: #fff
+	.bottom
+		padding: 20px 41px 22px 28px
+		.title
+			margin-bottom: 22px
+		.row
+			display: flex
+			flex-direction: row
+			.wrap-image
+				img
+					display: block
+					width: 164px
+					height: 189px
+				.team-info
+					margin: 9px
+					span
+						display: block
+						width: 100%
+						color: #ffffff
+						font-family: "Segoe UI"
+						font-size: 14px
+						font-style: italic
+						line-height: 1
+						margin-bottom: 3px
+			.description
+				margin-top: -5px
+				margin-bottom: 45px
+				margin-left: 45px
+				p
+					margin-bottom: 20px
+					&:last-of-type
+						margin-bottom: 41px
+
+
+.our-work
+	.row
+		display: flex
+		flex-direction: row
+		margin-right: 15px
+		.left, .right
+			position: relative
+			padding: 18px 20px 40px 30px
+			width: 50%
+			height: 467px
+		.left
+			background-color: $yellow
+		.right
+			background-color: $green
+		.title
+			color: #ffffff
+			font-family: "Segoe UI"
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+		.name
+			color: #ffffff
+			font-family: "Segoe UI"
+			font-size: 66px
+			font-weight: 400
+			line-height: 1.2
+			margin-bottom: 32px
+		.description
+			color: #ffffff
+			font-family: "Segoe UI"
+			font-size: 16px
+			font-weight: 400
+			line-height: 1.3
+		.button_wrapper
+			position: absolute
+			bottom: 51px
+
+.stories
+	margin-top: 18px
+	.row
+		padding: 21px 29px
+		margin-right: 15px
+		background-color: $blue
+		&::before
+			position: absolute
+			content: ''
+			border: 22px solid transparent
+			border-right: 22px solid #2f358a
+			left: -44px
+			top: 50%
+		&::after
+			position: absolute
+			content: ''
+			border: 22px solid transparent
+			border-left: 22px solid #2f358a
+			right: 10px
+			top: 50%
+		.title
+			color: #ffffff
+			font-family: "Segoe UI"
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+			margin-bottom: 3px
+		.stories-slider
+			overflow: hidden
+			position: relative
+			//padding: 0 12px
+			.slick-arrow
+				position: absolute
+				width: 50px
+				height: 50px
+				background-color: red
+				top: 50%
+				z-index: 1
+				&.prev
+					left: 10px
+					background: url("../img/L.png") no-repeat
+				&.next
+					right: 10px
+					background: url("../img/R.png") no-repeat
+
+			.slide-item
+				width: 644px
+				display: inline-block
+				margin: 12.5px
+			.slide-desc
+				border: 4px solid #ffffff
+				padding: 5px 0 24px 20px
+				.name
+					margin-bottom: 18px
+					color: #ffffff
+					font-family: "Segoe UI"
+					font-size: 66px
+					font-weight: 400
+					line-height: 1.2
+				.slide-content
+					display: flex
+					flex-direction: row
+					margin-bottom: 32px
+					padding-right: 22px
+					.img-wrapper
+						margin-right: 32px
+					.text-wrapper
+						margin-top: -5px
+						color: #ffffff
+						font-family: "Segoe UI"
+						font-size: 18px
+						font-weight: 400
+						line-height: 1.2
+						text-indent: 36px
+						max-height: 250px
+				.button_wrapper
+					text-align: right
+					padding-right: 22px
 
 @import "media" // Always at the end

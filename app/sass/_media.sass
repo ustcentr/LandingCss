@@ -2,18 +2,95 @@
 
 
 /*==========  Desktop First  ==========*/
++media-breakpoint-down(xl)
+  .bottom-header-container .social-list
+    right: 3px
+  .bottom-header-row .left
+    h1
+      font-size: 55px
+      margin-bottom: 40px
+    .description
+      font-size: 17px
+    .button_wrapper
+      position: absolute
+      bottom: 40px
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .bottom-header-row .left
+    h1
+      font-size: 42px
+      margin-bottom: 20px
+    .description
+      font-size: 16px
+    .button_wrapper
+      bottom: 25px
 
 // ≥992px
 +media-breakpoint-down(md)
+  .middle-menu .middle-menu-row
+    flex-direction: column
+    .first-level .dropdown-menu
+      top: 25px
+    .button_wrapper
+      margin-top: 15px
+  .bottom-header-row
+    flex-direction: column
+    .left
+      width: 100%
+      .description
+        margin-bottom: 30px
+      .button_wrapper
+        position: unset
+    .right
+      width: 100%
+      .img-responsive
+        width: 100%
+
 
 // ≥768px
 +media-breakpoint-down(sm)
+  header
+    .menu-container
+      padding-left: 15px
+      padding-right: 15px
+    .top-menu
+      .menu-row
+        justify-content: space-between
+        .main-menu
+          display: none
+        .mobile-menu
+          display: block
+  .middle-menu .middle-menu-row
+    .first-level
+      flex-direction: column
+      align-items: center
+      > li
+        width: 200px
+        text-align: center
+        &:not(:first-child)
+          margin-top: 15px
+        a
+          font-size: 18px
+      .dropdown-menu
+        width: 200px
+        box-shadow: 0 1px 3px rgba(47,53,138,.6)
+        li
+          text-align: left
+          &:first-child a
+            padding: 17px 0 23px 13px
+    .button_wrapper button
+      width: 140px
+      height: 46px
+      font-size: 18px
+      line-height: 44px
 
 // ≥576px
 +media-breakpoint-down(xs)
+  .bottom-header-row .left .button_wrapper
+    text-align: center
+    a
+      padding-right: 120px
 
 
 /*==========  Mobile First  ==========*/
