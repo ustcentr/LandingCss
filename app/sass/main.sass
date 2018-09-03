@@ -279,7 +279,7 @@ header
     position: relative
     margin: auto
     max-width: 1473px
-    padding-left: 30px
+    padding-left: 29px
     padding-right: 30px
 
 .motivating-quote .container
@@ -415,23 +415,24 @@ header
 .stories
 	margin-top: 18px
 	.row
-		padding: 21px 29px
+		padding: 21px 29px 26px
 		margin-right: 15px
 		background-color: $blue
+		position: relative
 		&::before
 			position: absolute
 			content: ''
 			border: 22px solid transparent
 			border-right: 22px solid #2f358a
 			left: -44px
-			top: 50%
+			top: 47%
 		&::after
 			position: absolute
 			content: ''
 			border: 22px solid transparent
 			border-left: 22px solid #2f358a
-			right: 10px
-			top: 50%
+			right: -44px
+			top: 47%
 		.title
 			color: #ffffff
 			font-family: "Segoe UI"
@@ -440,25 +441,23 @@ header
 			text-transform: uppercase
 			margin-bottom: 3px
 		.stories-slider
-			overflow: hidden
 			position: relative
-			//padding: 0 12px
 			.slick-arrow
 				position: absolute
 				width: 50px
 				height: 50px
 				background-color: red
-				top: 50%
+				top: 44%
 				z-index: 1
 				&.prev
-					left: 10px
+					left: -34px
 					background: url("../img/L.png") no-repeat
 				&.next
-					right: 10px
+					right: -61px
 					background: url("../img/R.png") no-repeat
 
 			.slide-item
-				width: 644px
+				//width: 644px
 				display: inline-block
 				margin: 12.5px
 			.slide-desc
@@ -490,5 +489,112 @@ header
 				.button_wrapper
 					text-align: right
 					padding-right: 22px
+
+.ways-to-help
+	background: url("../img/Layer_17.png")
+	.container
+		padding-bottom: 97px
+	.title
+		font-family: "Segoe UI"
+		font-size: 66px
+		font-style: italic
+		color: #ffffff
+		text-align: center
+		line-height: 1.2
+		padding: 85px 0 94px
+		margin-left: 22px
+	.row
+		display: flex
+		flex-direction: row
+		.item
+			max-width: 460px
+			margin-right: 10px
+			width: 100%
+			.bottom-wrap
+				display: flex
+				flex-direction: column
+				align-items: center
+				height: 460px
+				background-color: #fff
+				img
+					margin: auto
+			.top-wrap, .bottom-wrap
+				position: relative
+				.description
+					display: flex
+					flex-direction: row
+					align-items: center
+					height: 145px
+					color: #ffffff
+					font-size: 36px
+					font-weight: 400
+					width: 100%
+					background-color: rgba(#000, 0.6)
+					line-height: 1.2
+					padding-left: 22px
+			.top-wrap
+				margin-bottom: 7px
+				.description
+					position: absolute
+					bottom: 0
+			.bottom-wrap
+				.description
+					padding-left: 27px
+					a
+						color: #ffffff
+						font-family: "Segoe UI Light"
+
+.news
+	background-color: #c2c2c2
+	.title
+		color: #000000
+		font-family: "Segoe UI"
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		padding: 25px 30px 54px
+		a
+			color: #000000
+			font-family: "Segoe UI"
+			font-size: 14px
+			font-weight: 400
+			text-decoration: underline
+			text-transform: none
+			margin-left: 16px
+	.row
+		display: flex
+		flex-direction: row
+		.item
+			padding-left: 69px
+			padding-right: 142px
+			&:first-child
+				margin-right: 56px
+			.date
+				width: 115px
+				height: 49px
+				background-color: #ffffff
+				font-family: "Segoe UI"
+				font-size: 24px
+				font-weight: 300
+				line-height: 46px
+				text-align: center
+				margin-bottom: 15px
+			.content
+				padding-left: 16px
+			.name
+				color: #ffffff
+				font-family: "Segoe UI"
+				font-size: 24px
+				font-weight: 400
+				line-height: 1.2
+				margin-bottom: 20px
+			.description
+				color: #ffffff
+				font-family: "Segoe UI"
+				font-size: 16px
+				font-weight: 400
+				line-height: 1.2
+
+
 
 @import "media" // Always at the end
