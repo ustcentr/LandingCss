@@ -15,6 +15,31 @@
       position: absolute
       bottom: 40px
 
+  .our-work .row
+    .name
+      font-size: 50px
+    .left, .right
+      height: auto
+    .description
+      margin-bottom: 90px
+
+  .stories .row .stories-slider
+    .slide-desc
+      .name
+        font-size: 42px
+        min-height: 100px
+      .slide-content
+        .img-wrapper
+          text-align: center
+          margin-bottom: 20px
+        .text-wrapper
+          font-size: 16px
+          overflow: hidden
+        .button_wrapper
+          text-align: center
+    .slick-arrow
+      top: 44.6%
+
 // ≥1200px
 +media-breakpoint-down(lg)
   .bottom-header-row .left
@@ -25,6 +50,69 @@
       font-size: 16px
     .button_wrapper
       bottom: 25px
+
+  .our-work .row .name
+      font-size: 42px
+
+  .stories .row .stories-slider
+    .slide-desc
+      .name
+        font-size: 40px
+      .slide-content
+        .img-wrapper
+          margin-right: 15px
+        .text-wrapper
+          font-size: 16px
+
+  .ways-to-help
+    .title
+      font-size: 40px
+      padding: 40px
+    .row .item
+      .top-wrap, .bottom-wrap
+        .description
+          font-size: 30px
+          padding-left: 10px
+
+  .news
+    .row
+      .item
+        padding-right: 0
+
+  .contact-us
+    .title
+      font-size: 40px
+      .description
+        font-size: 30px
+    .checkbox-wrapper
+      flex-wrap: wrap
+      >span
+        width: 160px
+        margin-bottom: 15px
+      .checkbox-row
+        justify-content: space-between
+        flex-wrap: wrap
+        .checkbox-item
+          margin-right: 10px !important
+
+
+  .contact-us
+    form, .address
+      padding: 0 15px
+    .form-row label
+      width: 100%
+
+  footer
+    height: unset
+    min-height: 85px
+    .wrapper
+      justify-content: center
+      align-items: center
+      .logo
+        margin-right: 50px
+        .img-responsive
+          max-width: unset
+
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -40,12 +128,62 @@
       width: 100%
       .description
         margin-bottom: 30px
-      .button_wrapper
-        position: unset
+
     .right
       width: 100%
       .img-responsive
         width: 100%
+  .button_wrapper
+    position: unset!important
+
+  .about-us .bottom
+    .row
+      flex-direction: column
+      align-items: center
+      .description
+        margin: 0
+        padding-top: 15px
+    .title
+      margin-bottom: 10px
+
+  .motivating-quote
+    padding: 0 10px
+    text-align: center
+
+  .our-work .row
+    flex-direction: column
+    .left, .right
+      width: 100%
+
+  .ways-to-help
+    .row
+      flex-wrap: wrap
+      justify-content: space-around
+      .item
+        width: 48%
+        margin-bottom: 20px
+
+  .news
+    .row
+      flex-wrap: wrap
+      .item, .item:last-child, .item:first-child
+        width: 100%
+        padding-left: 0
+        margin-right: 0
+        .name
+          min-height: unset
+        .description
+          margin-bottom: 0
+          min-height: unset
+      .button_wrapper
+        margin: 35px 0
+        text-align: left
+
+  .contact-us
+    padding-right: 0
+    .submit-button
+      width: 100%
+
 
 
 // ≥768px
@@ -85,12 +223,60 @@
       font-size: 18px
       line-height: 44px
 
+  .stories .row .stories-slider .slide-desc
+    .slide-content
+      flex-direction: column
+      .img-wrapper, .text-wrapper
+        width: 100%
+      .img-wrapper img
+        display: inline-block
+    .button_wrapper
+      text-align: center
+
+  .contact-us .checkbox-wrapper .checkbox-row
+    justify-content: start
+
+  footer
+    .wrapper
+      flex-wrap: wrap
+
 // ≥576px
 +media-breakpoint-down(xs)
-  .bottom-header-row .left .button_wrapper
+  .button_wrapper
     text-align: center
-    a
-      padding-right: 120px
+    .learn-more
+      padding-right: 50px
+
+  .bottom-header-container
+    padding: 0
+
+  .container
+    padding-left: 0 !important
+    padding-right: 0 !important
+  .row
+    margin-right: 0 !important
+
+  .about-us
+    .top, .bottom
+      margin-right: 0
+
+  .ways-to-help .row
+    .item
+      margin-right: 0
+      width: 100%
+
+  footer .wrapper
+    .logo
+      margin-right: 0
+    .content
+      ul
+        flex-direction: column
+        align-items: center
+        li
+          padding-left: 0!important
+          padding-top: 10px
+          &:not(:first-child)::before
+            content: unset
 
 
 /*==========  Mobile First  ==========*/
