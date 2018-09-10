@@ -37,11 +37,13 @@
           overflow: hidden
         .button_wrapper
           text-align: center
-    .slick-arrow
-      top: 44.6%
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .motivating-quote.second-type .container
+    padding: 100px 0
+  .big-img
+    margin-top: 0
   .bottom-header-row .left
     h1
       font-size: 42px
@@ -113,6 +115,8 @@
         .img-responsive
           max-width: unset
 
+  .motivating-quote .container p
+    font-size: 40px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -175,9 +179,12 @@
         .description
           margin-bottom: 0
           min-height: unset
-      .button_wrapper
-        margin: 35px 0
-        text-align: left
+        .content
+          padding-left: 0
+        .button_wrapper
+          margin: 35px 0
+          text-align: left
+          padding-left: 0
 
   .contact-us
     padding-right: 0
@@ -223,15 +230,18 @@
       font-size: 18px
       line-height: 44px
 
-  .stories .row .stories-slider .slide-desc
-    .slide-content
-      flex-direction: column
-      .img-wrapper, .text-wrapper
-        width: 100%
-      .img-wrapper img
-        display: inline-block
-    .button_wrapper
-      text-align: center
+  .stories .row .stories-slider
+    .slide-desc
+      .slide-content
+        flex-direction: column
+        .img-wrapper, .text-wrapper
+          width: 100%
+        .img-wrapper img
+          display: inline-block
+      .button_wrapper
+        text-align: center
+    .slick-arrow
+      top: 48.5%
 
   .contact-us .checkbox-wrapper .checkbox-row
     justify-content: start
@@ -277,6 +287,13 @@
           padding-top: 10px
           &:not(:first-child)::before
             content: unset
+
+  .stories .row .stories-slider .slick-arrow
+    &.next
+      right: -24px
+    &.prev
+      left: -24px
+
 
 
 /*==========  Mobile First  ==========*/
