@@ -13,7 +13,6 @@ $(function() {
             socialList.css({
                 'position': 'absolute',
                 'top': '0',
-                //'right': rt
             });
 
         }  else {
@@ -21,8 +20,6 @@ $(function() {
             socialList.css({
                 'position': 'fixed',
                 'top': '0',
-                //'right': rt
-
             });
         }
     });
