@@ -1,6 +1,6 @@
 $(function() {
 
-    $(window).scroll(function () {
+    /*$(window).scroll(function () {
 
         var scroll = $(this).scrollTop(),
             socialList = $('.social-list');
@@ -22,7 +22,7 @@ $(function() {
                 'top': '0',
             });
         }
-    });
+    });*/
 
 	$('.language-switcher .current-language').click(function (e) {
         e.preventDefault();
