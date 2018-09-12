@@ -118,6 +118,9 @@
   .motivating-quote .container p
     font-size: 40px
 
+  .contact-us .description, .contact-us .sub-description, .contact-us .title
+    margin-left: 0
+
 // ≥992px
 +media-breakpoint-down(md)
   .middle-menu .middle-menu-row
@@ -210,6 +213,7 @@
     .first-level
       flex-direction: column
       align-items: center
+      width: auto
       > li
         width: 200px
         text-align: center
@@ -275,24 +279,30 @@
       margin-right: 0
       width: 100%
 
-  footer .wrapper
-    .logo
-      margin-right: 0
-    .content
-      ul
-        flex-direction: column
-        align-items: center
-        li
-          padding-left: 0!important
-          padding-top: 10px
-          &:not(:first-child)::before
-            content: unset
+  footer
+    .wrapper
+      flex-direction: column
+      .logo
+        margin-right: 0
+      .content
+        ul
+          flex-direction: column
+          align-items: center
+          min-width: 100%
+          li
+            padding-left: 0!important
+            padding-top: 10px
+            &:not(:first-child)::before
+              content: unset
 
-  .stories .row .stories-slider .slick-arrow
-    &.next
-      right: -24px
-    &.prev
-      left: -24px
+  .stories
+    .row
+      overflow: hidden
+      .stories-slider .slick-arrow
+        &.next
+          right: -24px
+        &.prev
+          left: -24px
 
 
 
